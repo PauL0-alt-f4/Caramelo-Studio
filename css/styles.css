@@ -1,0 +1,280 @@
+/* ======== BASE ======== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* evita barra lateral horizontal */
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url('../imagens/fundo.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #fff;
+}
+
+/* ======== HEADER ======== */
+header h1 {
+  margin-left: 30px;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* ======== MENU ======== */
+nav {
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 250px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li a {
+  background: #bdbdbd;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+nav li a:hover {
+  background: #757575;
+  color: #fff;
+}
+
+/* ======== CONTAINER DE COLUNAS ======== */
+.container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+/* ======== COLUNAS ======== */
+.coluna {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 16px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 500px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+}
+
+.coluna img {
+  max-width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.coluna img:hover {
+  transform: translateY(-10px);
+}
+
+/* ======== CLASSES DIVERSAS ======== */
+.fundo-paragrafo {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.link-fundo,
+.nav-buntton {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.15s, color 0.15s;
+}
+
+.link-fundo:hover {
+  background: #757575;
+  color: #fff;
+}
+
+.texto-preto {
+  color: #000;
+}
+
+/* ======== CONTATOS ======== */
+.contato-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 260px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.contato-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contato-card li {
+  margin-bottom: 15px;
+}
+
+.contato-card a {
+  color: #0a6a77;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ======== IMAGENS COM EFEITO DE FLUTUAÇÃO ======== */
+.img-flutua {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.img-flutua:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ======== VÍDEOS ======== */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.video-container iframe {
+  flex: 1 1 560px;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .coluna {
+    max-width: 400px;
+  }
+
+  .video-container iframe {
+    max-width: 90%;
+    height: auto;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+    margin-left: 0;
+  }
+
+  nav {
+    max-width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav li a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coluna {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+
+/* ======== AJUSTE DO MENU NO CELULAR EM PÉ ======== */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  nav {
+    max-width: 60%;
+    /* reduz a largura total do fundo */
+    padding: 10px;
+    /* deixa mais compacto */
+    background: rgba(255, 255, 255, 0.7);
+    /* mantém leve transparência */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav li a {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin-bottom: 10px;
+    background: #bdbdbd;
+    color: #333;
+  }
+}
